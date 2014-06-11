@@ -1,11 +1,10 @@
-package jp.classmethod.sample.actionreconizer;
+package jp.classmethod.sample.activityreconizer;
 
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.widget.CompoundButton;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -13,19 +12,17 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.location.ActivityRecognitionClient;
 
-// http://dev.classmethod.jp/smartphone/android/google-play-services-android-location-api-activity-recognition/
 public class MainActivity extends FragmentActivity {
-  static TextView tv;
+  
   private final MainActivity self = this;
   private ActivityRecognitionClient mClient;
-  private ToggleButton toggleButton;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
     mClient = new ActivityRecognitionClient(self, mConnectionCallbacks, mOnConnectionFailedListener);
-    toggleButton = new ToggleButton(this);
+    ToggleButton toggleButton = new ToggleButton(this);
     setContentView(toggleButton);
     toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
       @Override

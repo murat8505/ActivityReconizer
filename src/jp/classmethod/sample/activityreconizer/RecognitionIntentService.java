@@ -1,4 +1,4 @@
-package jp.classmethod.sample.actionreconizer;
+package jp.classmethod.sample.activityreconizer;
 
 import android.app.IntentService;
 import android.app.NotificationManager;
@@ -9,9 +9,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+
 import com.google.android.gms.location.ActivityRecognitionResult;
 import com.google.android.gms.location.DetectedActivity;
-import jp.classmethod.sample.actionreconizer.R;
 
 public class RecognitionIntentService extends IntentService {
   
